@@ -1,0 +1,56 @@
+$surface-color: #dd992d;
+$edge-color: #ac741c;
+$leg-color: #84570f;
+
+.title {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 45px;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  padding: 20px 30px;
+}
+
+.game {
+  margin: 15px 0 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: max-content;
+  perspective: 400px;
+}
+
+.surface {
+  background-color: $surface-color;
+  box-shadow: 0px 40px 10px rgba(0, 0, 0, 0.2);
+  transform-origin: bottom;
+  transform: rotateX(20deg);
+  padding: 15px 15px 22px 15px;
+}
+
+.edge {
+  background-color: $edge-color;
+  height: 15px;
+  width: 100%;
+  position: relative;
+  transform-origin: top;
+  transform: rotateX(-40deg);
+}
+
+.leg {
+  width: 24px;
+  height: 10px;
+  background: $leg-color;
+  position: absolute;
+  top: 15px;
+}
+
+.leg:first-child {
+  left: 20px;
+}
+
+.leg:last-child {
+  right: 20px;
+}
